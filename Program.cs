@@ -27,12 +27,16 @@ namespace zadanie_7._8
 
             Repository1 repo1 = new Repository1(path);
             repo1.Load("1");
-            
+            if (File.Exists(path) == false)
+            {
+                File.Create(path);
+            }
 
-            //Console.WriteLine(repo1[1][0]);
 
-            ////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-            do
+                //Console.WriteLine(repo1[1][0]);
+
+                ////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+                do
             {
                 string t = Console.ReadLine();
 
