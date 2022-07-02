@@ -65,7 +65,7 @@ namespace zadanie_7._8
                 }
                 
                 
-                if (Flag == "2" )
+                if (Flag == "2")
                 {
                     int T = 0;
                     Console.WriteLine("Введите ID для удаления");
