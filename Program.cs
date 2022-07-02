@@ -24,13 +24,13 @@ namespace zadanie_7._8
             //////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
             
             string path = @"input.txt";
-
-            Repository1 repo1 = new Repository1(path);
-            repo1.Load("1");
             if (File.Exists(path) == false)
             {
                 File.Create(path);
             }
+            Repository1 repo1 = new Repository1(path);
+            repo1.Load("1");
+            
 
 
                 //Console.WriteLine(repo1[1][0]);
