@@ -13,7 +13,13 @@ namespace zadanie_7._8
     {       
         static void Main(string[] args)
         {
-
+            string path = @"input.txt";
+            if (File.Exists(path) == false)
+            {
+                using (FileStream fs = File.Create(path)) ;
+                
+            }
+            
             Console.WriteLine("Здравсвуй, дорогой друг");
             Console.WriteLine("Если хочешь посмотреть записи напиши 1, для добавления 2, для просмотра по ID 3");
             Console.WriteLine("Если хочешь удалить запись напиши 4, для редактирования 5");
@@ -23,11 +29,7 @@ namespace zadanie_7._8
 
             //////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
             
-            string path = @"input.txt";
-            if (File.Exists(path) == false)
-            {
-                File.Create(path);
-            }
+            
             Repository1 repo1 = new Repository1(path);
             repo1.Load("1");
             
