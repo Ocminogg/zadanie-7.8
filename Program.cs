@@ -53,7 +53,7 @@ namespace zadanie_7._8
                         
                         string sotrudnik0 = Convert.ToString( repo1.Len()+1);
                         Console.WriteLine("Введите время добваления записи");
-                        string sotrudnik1 = Console.ReadLine();
+                        DateTime sotrudnik1 =DateTime.Now;
                         Console.WriteLine("Введите Ф. И. О.");
                         string sotrudnik2 = Console.ReadLine();
                         Console.WriteLine("Введите возраст");

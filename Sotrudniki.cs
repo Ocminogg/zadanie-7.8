@@ -8,7 +8,7 @@ namespace zadanie_7._8
 {
     struct Sotrudniki
     {
-        public Sotrudniki(string ID, string Date_add, string FIO, int Old, int Tall , string Date_of_Birth, string Place_of_Birth)
+        public Sotrudniki(string ID, DateTime Date_add, string FIO, int Old, int Tall , string Date_of_Birth, string Place_of_Birth)
         {
             this.ID = ID;
             this.Date_add = Date_add;
@@ -29,7 +29,7 @@ namespace zadanie_7._8
             return this.ID;
         }
 
-        public string Date_add { get; set; }
+        public DateTime Date_add { get; set; }
 
         public string FIO { get; set; }
 

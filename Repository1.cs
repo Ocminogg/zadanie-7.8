@@ -59,7 +59,7 @@ namespace zadanie_7._8
                         {
                             break;
                         }
-                        Add(new Sotrudniki(args[0], args[1], args[2], Convert.ToInt32(args[3]), Convert.ToInt32(args[4]), args[5], args[6]));
+                        Add(new Sotrudniki(args[0], Convert.ToDateTime(args[1]), args[2], Convert.ToInt32(args[3]), Convert.ToInt32(args[4]), args[5], args[6]));
                         
                     }
                 }
@@ -177,7 +177,7 @@ namespace zadanie_7._8
                         {
                             break;
                         }
-                        Add(new Sotrudniki(args[0], args[1], args[2], Convert.ToInt32(args[3]), Convert.ToInt32(args[4]), args[5], args[6]));
+                        Add(new Sotrudniki(args[0],Convert.ToDateTime( args[1]), args[2], Convert.ToInt32(args[3]), Convert.ToInt32(args[4]), args[5], args[6]));
                     }
                 }
                     
@@ -220,7 +220,7 @@ namespace zadanie_7._8
             var parsedDateEnd = DateTime.Parse(end, cultureInfo);
             for (int i = 0; i < index; i++)
             {
-                var parsedDate = DateTime.Parse(this.sotrudnik[i].Date_add, cultureInfo);
+                var parsedDate = DateTime.Parse(Convert.ToString(this.sotrudnik[i].Date_add), cultureInfo);
                 if ((parsedDateStart <= parsedDate)&(parsedDate <= parsedDateEnd))
                 {
                     Console.WriteLine(this.sotrudnik[i].Print1());
@@ -239,7 +239,7 @@ namespace zadanie_7._8
             
             for (int i = 0; i < index; i++)
             {
-                var parsedDate = DateTime.Parse(this.sotrudnik[i].Date_add, cultureInfo);
+                var parsedDate = DateTime.Parse(Convert.ToString(this.sotrudnik[i].Date_add), cultureInfo);
                 sotrudnikiData[i] = parsedDate;
 
             }
@@ -254,7 +254,7 @@ namespace zadanie_7._8
                 {
                     for (int i = 0; i < index; i++)
                     {
-                        var parsedDateSotrudnik = DateTime.Parse(this.sotrudnik[i].Date_add, cultureInfo);
+                        var parsedDateSotrudnik = DateTime.Parse(Convert.ToString(this.sotrudnik[i].Date_add), cultureInfo);
                         if (str == parsedDateSotrudnik)
                         {
                             Console.WriteLine(this.sotrudnik[i].Print1());
@@ -275,7 +275,7 @@ namespace zadanie_7._8
                 {
                     for (int i = 0; i < index; i++)
                     {
-                        var parsedDateSotrudnik = DateTime.Parse(this.sotrudnik[i].Date_add, cultureInfo);
+                        var parsedDateSotrudnik = DateTime.Parse(Convert.ToString(this.sotrudnik[i].Date_add), cultureInfo);
                         if (str == parsedDateSotrudnik)
                         {
                             Console.WriteLine(this.sotrudnik[i].Print1());
